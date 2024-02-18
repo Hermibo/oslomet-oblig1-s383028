@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src = "billett.js" defer></script>
+</head>
+<body>
+<h1>Bestilling av kinobilletter</h1>
+<label for="film"> Velg film: </label>
+<select id = "film">
+    <option> Velg Film </option>
+    <option> Spiderman </option>
+    <option> Batman </option>
+    <option> Sandman </option>
+</select>
+<table>
+    <tr><td>Antall</td><td><input type="text" id="antall" onchange="validerAntall(this.value)"/></td></tr>
+    <span id="feilAntall" style="color: red"></span>
+    <tr><td>Fornavn</td><td><input type="text" id="fornavn" onchange="validerFornavn(this.value)"/></td></tr>
+    <span id="feilFornavn" style="color: red"></span>
+    <tr><td>Etternavn</td><td><input type="text" id="etternavn" onchange="validerEtternavn(this.value)"/></td></tr>
+    <span id="feilEtternavn" style="color: red"></span>
+    <tr><td>Telefonnr</td><td><input type="text" id="telefonnr" onchange="validerTelefonnr(this.value)"/></td></tr>
+    <span id="feilTelefonnr" style="color: red"></span>
+    <tr><td>Epost</td><td><input type="text" id="epost"onchange="validerEpost(this.value)"/></td></tr>
+    <span id="feilEpost" style="color: red"></span>
+    <tr><td><button onclick="registrer()">Kjøp billett</button></td></tr>
+</table>
+<h2>Alle billetter</h2>
+<h3>Film Antall Fornavn Etternavn Telefonnr Epost </h3>
+<div id="billettRegister"></div>
+<button onclick="slettBillett()">Slett billettregister</button>
+</body>
+</html>
